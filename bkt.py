@@ -17,5 +17,5 @@ class BKTModel:
         else:
             pl_after_response = (student_pl * self.ps) / (student_pl * self.ps + (1 - student_pl) * (1 - self.pg))
         
-        new_pl = round(pl_after_response + ((1 - pl_after_response) * self.pt), 2)
+        new_pl = pl_after_response + ((1 - pl_after_response) * self.pt)
         return [new_pl]
